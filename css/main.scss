@@ -36,6 +36,37 @@ a {
 }
 
 body {
+    .scroll-to-top {
+        width: 35px;
+        height: 35px;
+        position: fixed;
+        right: 25px;
+        bottom: 25px;
+        z-index: 9999;
+        transition: 0.3s;
+        display: none;
+        span {
+            background: linear-gradient(
+                    to right,
+                    #1368cc 50%,
+                    #{$main_color_alt} 50%
+                )
+                no-repeat scroll right bottom/210% 100% #{$main_color_alt};
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            &::after {
+                font-family: "FontAwesome";
+                content: "\f077";
+                font-size: 18px;
+                position: relative;
+                top: 5px;
+            }
+        }
+    }
     header {
         background-color: white;
         box-shadow: 0 0 10px #ddd;
